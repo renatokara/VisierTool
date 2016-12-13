@@ -1,0 +1,65 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+* {
+  font-size:11pt;
+  font-family:verdana;
+}
+
+#tabResult table{
+
+  border-style:solid;
+  border-width: 1px;
+  border-color: black;
+
+
+}
+#tabResult td, th {
+  padding:1px;
+  padding-right: 5px;
+  padding-left: 10px;
+}
+#tabResult table th{
+  background-color: #AFAFAF;
+  font-weight: bold;
+}
+#estrelas li {
+  background-color:#DDD;
+  padding:5px;
+  padding-left:15px;
+  border-radius: 10px;
+  border-style: groove;
+  cursor: pointer;
+}
+#estrelas div {
+  background-color:#FEFEFE;
+  padding:5px;
+  padding-left:25px;
+  border-radius: 7px;
+}
+.divtab table{
+  border-style:solid;
+  border-width: 1px;
+  border-color: black;
+  margin-left: 77px;
+
+}
+
+.divtab table th{
+  background-color: #AFAFAF;
+  font-weight: bold;
+  padding: 4px;
+}
+
+.divtab table td{
+  background-color: #FAFAFA;
+  font-weight: normal;
+  padding: 4px;
+}
