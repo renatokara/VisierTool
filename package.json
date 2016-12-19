@@ -3,22 +3,30 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "start-dev": "babel-watch ./bin/www"
+    "start": "node src/main/bin/www",
+    "start-dev": "babel-watch src/main/bin/www",
+    "http-server-dev": "http-server public -p 8080",
+    "test": "mocha --compilers js:babel-register src/test/",
+    "integration-test": "mocha --compilers js:babel-register src/it/"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.1",
     "debug": "~2.2.0",
     "express": "~4.14.0",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
+    "request": "^2.79.0",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-es2015-node": "^6.1.1",
     "babel-preset-es2017": "^6.16.0",
-    "babel-watch": "^2.0.4"
+    "babel-watch": "^2.0.4",
+    "chai": "^3.5.0",
+    "http-server": "^0.9.0",
+    "mocha": "^3.2.0"
   }
 }

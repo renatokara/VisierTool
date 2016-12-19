@@ -4,19 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Search visier</title>
 
-    <script class="include" type="text/javascript" src="./javascripts/jqplot/jquery.min.js"></script>
-    <script class="include" type="text/javascript" src="./javascripts/jqplot/jquery.jqplot.min.js"></script>
+    <script class="include" type="text/javascript" src="./javascripts/plugin/jquery-3.1.1.min.js"></script>
     <script class="include" type="text/javascript" src="./javascripts/search_visier.js"></script>
-
-
-    <script class="include" type="text/javascript" src="./javascripts/plugins/jqplot.logAxisRenderer.min.js"></script>
-    <script class="include" type="text/javascript" src="./javascripts/plugins/jqplot.canvasTextRenderer.min.js"></script>
-    <script class="include" type="text/javascript" src="./javascripts/plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
-    <script class="include" type="text/javascript" src="./javascripts/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
-    <script class="include" type="text/javascript" src="./javascripts/plugins/jqplot.dateAxisRenderer.min.js"></script>
-    <script class="include" type="text/javascript" src="./javascripts/plugins/jqplot.categoryAxisRenderer.min.js"></script>
-    <script class="include" type="text/javascript" src="./javascripts/plugins/jqplot.barRenderer.min.js"></script>
-
+	<script type="text/javascript"  src="./javascripts/plugin/plotly-latest.min.js" ></script>
    <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
 
 </head>
@@ -31,16 +21,44 @@
                     Incusão de dados
                 </legend>
 
-                <textarea id="dados" name="dados" cols="80" rows="20" onchange="changeTextarea()">TWA 1	165,4659259731	-34,704789396
-TWA 4	170,5216198818	-24,777768
-TWA 9A	177,1006496966	-37,48038598
-TWA 11A	189,0019671349	-39,87115115
-TWA 19A	176,8520412459	-49,88421245</textarea>
+                <textarea id="dados" name="dados" cols="50" rows="6" onkeyup="onChangeData()" >TWA1	165.4659259731	-34.704789396
+TWA4	170.5216198818	-24.777768
+TWA9A	177.1006496966	-37.48038598
+TWA11A	189.0019671349	-39.87115115
+TWA19A	176.8520412459	-49.88421245</textarea>
 
                 <input type="button" value="Buscar" onclick="search()">
             </fieldset>
 
             <br>
+			<fieldset>
+				<div id="processedData">
+					<table id="processedDataTab">
+						<tr>
+							<th>
+								Nome
+							</th>
+							<th>
+								RA
+							</th>
+							<th>
+								DEC
+							</th>
+						</tr>
+
+					</table>
+				</div>
+				<br>
+				<fieldset>
+					<legend >Tabelas</legend>
+					<select multiple id="ulTables">
+
+					</select>
+
+				</fieldset>
+
+
+			</fieldset>
         </form>
     </div>
 </div>
@@ -55,9 +73,9 @@ TWA 19A	176,8520412459	-49,88421245</textarea>
 	</tr>
 	<tr>
 		<td colspan="3" />
-			<ul id="estrelas"">
+			<ul id="estrelas">
 
-			<ul>
+			<ul/>
 		</td>
 	</tr>
 	<tr>
