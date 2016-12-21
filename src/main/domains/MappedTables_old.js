@@ -26,7 +26,8 @@ module.exports.MappedTables  = [{
         pm_dec: "pmdec",
         error_pmDec: "pmdec_error"
     }
-}, {
+},
+    {
     codigo:'I/259/tyc2',
     columns: {
         ra: "RA(ICRS)",
@@ -40,7 +41,8 @@ module.exports.MappedTables  = [{
         pm_dec: "pmDE",
         error_pmDec: "e_pmDE"
     }
-}, {
+},
+    {
     codigo:'I/239/hip_main',
     columns: {
         ra: "RA(ICRS)",

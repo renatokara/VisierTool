@@ -2,12 +2,13 @@
  * Created by renato on 07/12/16.
  */
 
-const URL_BACKEND = "http://localhost:3000"
-function search(){
+const URL_BACKEND = "http://localhost:3000";
+let data_returned;
+function search_direct(){
     $("#retorno").show();
     showPlot();
 }
-function search2(){
+function search(){
 
     var url = "";
 
@@ -19,10 +20,17 @@ function search2(){
     })
         .done(function(data) {
             console.log(data);
-
             $("#retorno").show();
+            data_returned = data;
 
-            alert(data);
+            let $uls = $("ul#estrelas");
+
+            data_returned.stars.forEach((star)=>{
+                $uls.append("<li><a href='javascript:return false;' onclick=\"showPlot('" + star.name + "')\" >" + star.name +  "</a><div id='div_"+star.name+ "'></div></li>");
+            });
+
+
+
 
         })
         .fail(function(err) {
@@ -99,60 +107,49 @@ function loadTableList(){
 
 }
 
-function showPlot(){
-
-    Plotly.d3.json( "http://localhost:8080/data/queryJson.json", function(rows){
-        var trace = {
-            type: 'scatter',                    // set the chart type
-            mode: 'lines',                      // connect points with lines
-            x: rows.map(function(row){          // set the x-data
-               if (row.data && row.data[0]){
-                console.log("epoch", eval(row.data[0][5]));
-                return eval(row.data[0][5]);
-               }else {
-                   return null;
-               }
-            }),
-            y: rows.map(function(row){
-                    if (row.data && row.data[0]) {// set the x-data
-                        console.log("ra", row.data[0][1]);
-                        return row.data[0][1];
-                    }else {
-                        return null;
-                    }
-            }),
-            line: {                             // set the width of the line.
-                width: 1
-            },
-            error_y: {
-                array: rows.map(function(row){    // set the height of the error bars
-                     if (row.data && row.data[0]) {
-                         console.log("error ra",row.data[0][2])
-                         return row.data[0][2];
-                     }else {
-                         return null;
-                     }
-                }),
-                thickness: 0.5,                   // set the thickness of the error bars
-                width: 0.1
-            }
-        };
-
-        var layout = {
-            yaxis: {title: "RA",
-                showgrid: true},       // set the y axis title
-            xaxis: {
-                title: "RA",
-                showgrid: true
-            }
-            ,
-            margin: {                           // update the left, bottom, right, top margin
-                l: 40, b: 20, r: 10, t: 20
-            }
-        };
-
-        Plotly.plot(document.getElementById('out'), [trace], layout, {showLink: false});
+function showPlot(name){
+    let data = [];
+    console.log("data_returned.stars",data_returned.stars)
+    data_returned.stars.forEach((x)=>{
+        if(x.name == name){
+            x.data.forEach((item)=>{
+            data.push({x:eval(item[5]),y:item[1],error_x:0, error_y:item[2]});
+            });
+        }
     });
+
+    console.log(data);
+
+    var dataFormated = [
+        {
+            type: 'scatter',
+            x: data.reduce(function(prevVal, elem){
+                prevVal.push(elem.x);
+                return prevVal;
+            },[]),
+            y: data.reduce(function(prevVal, elem){
+                prevVal.push(elem.y);
+                return prevVal;
+            },[]),
+            error_y:{
+                type: 'data',
+                visible: true,
+                array: data.reduce(function(prevVal, elem){
+                prevVal.push(elem.error_y);
+                return prevVal;
+            },[])  }
+
+            ,
+            /*error_x:data.reduce(function(prevVal, elem){
+                prevVal.push(elem.error_x);
+                return prevVal;
+            },[]) */
+        }
+    ];
+
+    console.log("data", dataFormated);
+
+    Plotly.newPlot("div_"+ name, dataFormated);
 
 }
 

@@ -1,5 +1,8 @@
 import fs from 'fs'
 import ADQLConnector from './ADQLConnector'
+import queryJson from '../mock/queryJson.json'
+
+const flag_mock = false;
 module.exports.readStarsADQL = async function () {
 
     const result = await new Promise(function (resolve, reject){
@@ -21,7 +24,7 @@ module.exports.readStarsADQL = async function () {
 }
 
 module.exports.writeResultingJson = async function (obj) {
-    const result = await new Promise(function (resolve, reject){
+    const result = new Promise(function (resolve, reject){
         try {
             const fileName = "./cache/queryJson.json";
             if (!fs.existsSync(fileName)){
@@ -47,8 +50,13 @@ module.exports.writeResultingJson = async function (obj) {
 
 
  module.exports.searchStars = async function (ra, dec, name, tab) {
+    if (flag_mock){
+        return queryJson;
+    }
     const query = await this.parseColumnsStarsQuery(ra, dec, name, tab);
     const jsonReturned = await ADQLConnector.executeADQL(query);
+
+    //this.writeResultingJson(jsonReturned);
     return jsonReturned;
 }
 
@@ -94,4 +102,50 @@ function wrapWith(text, c){
     }
 
     return c + text + c ;
+}
+
+
+
+
+module.exports.transformReturnedData = function (queryJson) {
+    const obj = {
+        "metadata": queryJson[0].metadata,
+        "stars": []
+    };
+
+    queryJson.forEach((line) => {
+        let d = line.data;
+        if (d[0]) {
+            let item = containName(obj.stars, d[0][0]);
+            if (!item) {
+
+                obj.stars.push({"name": d[0][0], "data": new Array(d[0])});
+
+            } else {
+                item.data.push(d[0]);
+            }
+        }
+    });
+
+    obj.stars.forEach((s)=>{
+        s.data.sort(function(a, b){
+            if(a && b){
+                return eval(a[5]) - eval(b[5]);
+            }
+            return 0;
+        })
+    })
+
+    return obj;
+}
+
+
+function containName(list, name){
+    for (let x in list){
+        if (list[x].name && name == list[x].name){
+            return list[x];
+        }
+    }
+
+    return null;
 }

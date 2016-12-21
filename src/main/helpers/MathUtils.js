@@ -43,7 +43,7 @@ function findAproximation(set,n) {
             matrixX[k][i] = sum(k+i, set);
         }
     }
-    var matrixY = new Array(n);
+    var matrixY = [n];
 
     for (var k =0; k < n; k++){
         matrixY[k] = product(k, set);
@@ -91,7 +91,7 @@ function solveSystem(matrixA, matrixB) {
  * @return
  */
 function solveSystem(n, matrixExpanded) {
-    var result = new Array(n);
+    var result = [n];
     var solved = false;
     var numLinha = 0;
     while(!solved){
@@ -152,7 +152,7 @@ function product(atPow,doubles ){
 function sum(atPow,doubles ){
     var d = 0.0;
     for (var v in doubles){
-        d += Math.pow(v, atPow);
+        d += Math.pow(doubles[v], atPow);
     }
     return d;
 }
@@ -174,7 +174,7 @@ function matrixToString(mn){
 function matrixToString(m) {
     var sb = "";
     for (var n in m) {
-        sb += ("\t\t"+n+"\t\t");
+        sb += ("\t\t"+m[n]+"\t\t");
     }
 
     return sb.toString();

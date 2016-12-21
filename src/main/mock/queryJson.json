@@ -1,0 +1,1966 @@
+[
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "? Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA1",
+        165.4659259731,
+        0.185,
+        -34.704789396,
+        0.186,
+        2015,
+        2015,
+        -68.225,
+        0.134,
+        -13.934,
+        0.132
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA1",
+        165.4659259731,
+        0.185,
+        -34.704789396,
+        0.186,
+        2015,
+        2015,
+        -68.225,
+        0.134,
+        -13.934,
+        0.132
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Observed Tycho-2 Right Ascension, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "s.e.RA*cos(dec), of observed Tycho-2 RA (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "Observed Tycho-2 Declination, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "s.e. of observed Tycho-2 Dec (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "[-4418.0,6544.2]? prop. mot. in RA*cos(dec)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "[0.2,11.5]? s.e. prop mot in RA*cos(dec)(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "[-5774.3,10277.3]? prop. mot. in Dec",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "[0.2,10.3]? s.e. of proper motion in Dec(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA1",
+        165.46648028,
+        135.7,
+        -34.70472028,
+        144.1,
+        "1990",
+        "1990",
+        -73.4,
+        2.3,
+        -17.5,
+        2.3
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "*? alpha, degrees (ICRS, Epoch=J1991.25) (H8)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "? Standard error in RA*cos(DEdeg) (H14) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "*? delta, degrees (ICRS, Epoch=J1991.25) (H9)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "? Standard error in DE (H15) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion mu_alpha.cos(delta), ICRS(H12) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error in pmRA (H17)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion mu_delta, ICRS (H13) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error in pmDE (H18)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA1",
+        165.46647431,
+        1.5,
+        -34.70469788,
+        1.44,
+        "1991.25",
+        "1991.25",
+        -66.9,
+        1.78,
+        -12.36,
+        1.42
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "? Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA4",
+        170.5216198818,
+        12.021,
+        -24.7777680042,
+        9.789,
+        2015,
+        2015,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": []
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Observed Tycho-2 Right Ascension, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "s.e.RA*cos(dec), of observed Tycho-2 RA (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "Observed Tycho-2 Declination, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "s.e. of observed Tycho-2 Dec (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "[-4418.0,6544.2]? prop. mot. in RA*cos(dec)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "[0.2,11.5]? s.e. prop mot in RA*cos(dec)(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "[-5774.3,10277.3]? prop. mot. in Dec",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "[0.2,10.3]? s.e. of proper motion in Dec(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA4",
+        170.52226944,
+        12.6,
+        -24.77758361,
+        14.2,
+        "1990",
+        "1990",
+        -91.7,
+        1.6,
+        -31.1,
+        1.4
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "*? alpha, degrees (ICRS, Epoch=J1991.25) (H8)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "? Standard error in RA*cos(DEdeg) (H14) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "*? delta, degrees (ICRS, Epoch=J1991.25) (H9)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "? Standard error in DE (H15) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion mu_alpha.cos(delta), ICRS(H12) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error in pmRA (H17)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion mu_delta, ICRS (H13) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error in pmDE (H18)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA4",
+        170.52226953,
+        2.34,
+        -24.7776299,
+        2.62,
+        "1991.25",
+        "1991.25",
+        -85.45,
+        1.89,
+        -33.37,
+        2.12
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "? Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA9A",
+        177.1006496966,
+        0.215,
+        -37.4803859843,
+        0.148,
+        2015,
+        2015,
+        -53.001,
+        0.181,
+        -18.364,
+        0.123
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA9A",
+        177.1006496966,
+        0.215,
+        -37.4803859843,
+        0.148,
+        2015,
+        2015,
+        -53.001,
+        0.181,
+        -18.364,
+        0.123
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Observed Tycho-2 Right Ascension, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "s.e.RA*cos(dec), of observed Tycho-2 RA (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "Observed Tycho-2 Declination, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "s.e. of observed Tycho-2 Dec (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "[-4418.0,6544.2]? prop. mot. in RA*cos(dec)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "[0.2,11.5]? s.e. prop mot in RA*cos(dec)(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "[-5774.3,10277.3]? prop. mot. in Dec",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "[0.2,10.3]? s.e. of proper motion in Dec(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA9A",
+        177.10103972,
+        68.6,
+        -37.48027833,
+        74.4,
+        "1990",
+        "1990",
+        -55.4,
+        2.3,
+        -17.7,
+        2.3
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "*? alpha, degrees (ICRS, Epoch=J1991.25) (H8)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "? Standard error in RA*cos(DEdeg) (H14) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "*? delta, degrees (ICRS, Epoch=J1991.25) (H9)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "? Standard error in DE (H15) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion mu_alpha.cos(delta), ICRS(H12) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error in pmRA (H17)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion mu_delta, ICRS (H13) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error in pmDE (H18)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA9A",
+        177.10109093,
+        2.22,
+        -37.48026478,
+        1.47,
+        "1991.25",
+        "1991.25",
+        -54.1,
+        2.12,
+        -19.97,
+        1.54
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "? Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA11A",
+        189.0019671349,
+        0.499,
+        -39.8711511475,
+        0.52,
+        2015,
+        2015,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": []
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Observed Tycho-2 Right Ascension, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "s.e.RA*cos(dec), of observed Tycho-2 RA (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "Observed Tycho-2 Declination, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "s.e. of observed Tycho-2 Dec (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "[-4418.0,6544.2]? prop. mot. in RA*cos(dec)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "[0.2,11.5]? s.e. prop mot in RA*cos(dec)(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "[-5774.3,10277.3]? prop. mot. in Dec",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "[0.2,10.3]? s.e. of proper motion in Dec(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": []
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "*? alpha, degrees (ICRS, Epoch=J1991.25) (H8)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "? Standard error in RA*cos(DEdeg) (H14) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "*? delta, degrees (ICRS, Epoch=J1991.25) (H9)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "? Standard error in DE (H15) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion mu_alpha.cos(delta), ICRS(H12) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error in pmRA (H17)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion mu_delta, ICRS (H13) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error in pmDE (H18)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": []
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "? Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "float",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA19A",
+        176.8520412459,
+        0.165,
+        -49.8842124461,
+        0.136,
+        2015,
+        2015,
+        -34.754,
+        0.055,
+        -9.754,
+        0.071
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Right ascension (ICRS) at epoch 2015.0 (\\original{ra})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "Standard error of right ascension (\\original{ra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.ra"
+      },
+      {
+        "name": "dec",
+        "description": "Declination (ICRS) at epoch 2015.0 (\\original{dec})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "Standard error of declination (\\original{dec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error;pos.eq.dec"
+      },
+      {
+        "name": "epochRA",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "epochDec",
+        "description": "[2015.0] Reference epoch in Julian years (\\original{ref_epoch}) (G4)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "yr",
+        "ucd": "meta.ref;time.epoch"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion in right ascension direction (\\original{pmRA}) (G5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "Standard error of proper motion in right ascension direction (\\original{pmra_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "pm_dec",
+        "description": "Proper motion in declination direction (\\original{pmdec}) (G6)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "Standard error of proper motion in declination direction (\\original{pmdec_error})",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error;pos.pm;pos.eq.dec"
+      }
+    ],
+    "data": [
+      [
+        "TWA19A",
+        176.8520412459,
+        0.165,
+        -49.8842124461,
+        0.136,
+        2015,
+        2015,
+        -34.754,
+        0.055,
+        -9.754,
+        0.071
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "Observed Tycho-2 Right Ascension, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "s.e.RA*cos(dec), of observed Tycho-2 RA (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "Observed Tycho-2 Declination, ICRS",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "s.e. of observed Tycho-2 Dec (5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "[-4418.0,6544.2]? prop. mot. in RA*cos(dec)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "[0.2,11.5]? s.e. prop mot in RA*cos(dec)(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "[-5774.3,10277.3]? prop. mot. in Dec",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "[0.2,10.3]? s.e. of proper motion in Dec(5)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA19A",
+        176.85239306,
+        9,
+        -49.88415056,
+        8.1,
+        "1990",
+        "1990",
+        -33.7,
+        1.1,
+        -9.1,
+        1.1
+      ]
+    ]
+  },
+  {
+    "metadata": [
+      {
+        "name": "STAR_NAME",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "ra",
+        "description": "*? alpha, degrees (ICRS, Epoch=J1991.25) (H8)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.ra;meta.main"
+      },
+      {
+        "name": "erroRA",
+        "description": "? Standard error in RA*cos(DEdeg) (H14) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "dec",
+        "description": "*? delta, degrees (ICRS, Epoch=J1991.25) (H9)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "deg",
+        "ucd": "pos.eq.dec;meta.main"
+      },
+      {
+        "name": "erroDec",
+        "description": "? Standard error in DE (H15) {\\em(at epoch J1991.25; for different epochs, {\\bf\\fg{red3}the actual mean error must take into account the proper motion uncertainties})}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "epochRA",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "epochDec",
+        "datatype": "char",
+        "arraysize": "*"
+      },
+      {
+        "name": "pmRA",
+        "description": "Proper motion mu_alpha.cos(delta), ICRS(H12) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.ra"
+      },
+      {
+        "name": "error_pmRA",
+        "description": "? Standard error in pmRA (H17)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      },
+      {
+        "name": "pm_dec",
+        "description": "? Proper motion mu_delta, ICRS (H13) {\\em(for J1991.25 epoch)}",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "pos.pm;pos.eq.dec"
+      },
+      {
+        "name": "error_pmDec",
+        "description": "? Standard error in pmDE (H18)",
+        "datatype": "double",
+        "arraysize": "1",
+        "unit": "mas/yr",
+        "ucd": "stat.error"
+      }
+    ],
+    "data": [
+      [
+        "TWA19A",
+        176.85239682,
+        0.64,
+        -49.88414837,
+        0.85,
+        "1991.25",
+        "1991.25",
+        -33.7,
+        0.78,
+        -10.16,
+        1
+      ]
+    ]
+  }
+]
