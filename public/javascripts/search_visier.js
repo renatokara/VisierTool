@@ -4,60 +4,87 @@
 
 const URL_BACKEND = "http://localhost:3000";
 let data_returned;
-function search_direct(){
+function search_direct() {
     $("#retorno").show();
     showPlot();
 }
-function search(){
+function search() {
 
     var url = "";
 
     var jqxhr = $.ajax({
-        type: "POST", url:URL_BACKEND + "/visier/search",
-        dataType : 'json', // data type
+        type: "POST", url: URL_BACKEND + "/visier/search",
+        dataType: 'json', // data type
         contentType: "application/json;charset=UTF-8",
-        data : JSON.stringify({"dados":createJsonWithData()})
+        data: JSON.stringify({"dados": createJsonWithData()})
     })
-        .done(function(data) {
+        .done(function (data) {
             console.log(data);
             $("#retorno").show();
             data_returned = data;
-
             let $uls = $("ul#estrelas");
-
-            data_returned.stars.forEach((star)=>{
-                $uls.append("<li><a href='javascript:return false;' onclick=\"showPlot('" + star.name + "')\" >" + star.name +  "</a><div id='div_"+star.name+ "'></div></li>");
+            data_returned.stars.forEach((star) => {
+                $uls.append("<li>" +
+                    "<a href='javascript:return false;' onclick=\"showPlot('" + star.name + "')\" >" + star.name + "</a>" +
+                    "<div id='div_" + star.name + "' style='display:none;'> " +
+                    getReturnedTableOfContents(star) +
+                    "   <div id='div_ra_" + star.name + "'></div>" +
+                    "   <div id='div_dec_" + star.name + "'></div>" +
+                    "</li>");
             });
-
-
-
-
         })
-        .fail(function(err) {
-            alert( "error :" + err.toString() );
+        .fail(function (err) {
+            alert("error :" + err.toString());
         })
-        .always(function() {
-           // alert( "complete" );
+        .always(function () {
+            // alert( "complete" );
         });
 };
 
+function getReturnedTableOfContents(star) {
+    let html = "<div id='tabResult'> ";
+    html += "   <table class='tabResult'> ";
 
-function createJsonWithData(){
+    if (data_returned.metadata) {
+        html += "<tr>";
+        data_returned.metadata.forEach((c) => {
+            html += "<th>" + c.name + "</th>";
+        });
+    }
+    html += "</tr>";
+    if (star.data) {
+        star.data.forEach((d) => {
+            html += "<tr>";
+            d.forEach((col) => {
+                html += "<td>" + col + "</td>";
+            });
+            html += "</tr>";
+        });
+    }
+
+    html += "   </table>";
+    html += "</div>";
+    return html;
+}
+
+
+function createJsonWithData() {
     const jsonDataObject = new Array();
     const data = $("#dados").val();
     const lines = data.split('\n');
-    lines.forEach((line)=> {
+    lines.forEach((line) => {
         let items = line.split(/[\t|,|\s]/g);
-            jsonDataObject.push({
-                "name":items[0],
-                "ra":items[1],
-                "dec": items[2] });
+        jsonDataObject.push({
+            "name": items[0],
+            "ra": items[1],
+            "dec": items[2]
+        });
 
-    }) ;
+    });
     return jsonDataObject;
 }
 
-function onChangeData(){
+function onChangeData() {
     const $dados = $("#dados");
     const data = $dados.val();
     const lines = data.split('\n');
@@ -65,112 +92,142 @@ function onChangeData(){
 
     const $tab = $("#processedDataTab");
     $("table#processedDataTab tr td").remove();
-    lines.forEach((line)=>{
+    lines.forEach((line) => {
         const items = line.split(/[\t|,|\s]/g);
         let tabLineHtml = "";
-        if (items.length == 3){
-            tabLineHtml += ("<tr><td><input type='text' value='"+ items[0]+"' /></td>");
-            tabLineHtml += ("<td><input type='text' value='"+ items[1]+"' /></td>");
-            tabLineHtml += ("<td><input type='text' value='"+ items[2]+"' /></td></tr>");
+        if (items.length == 3) {
+            tabLineHtml += ("<tr><td><input type='text' value='" + items[0] + "' /></td>");
+            tabLineHtml += ("<td><input type='text' value='" + items[1] + "' /></td>");
+            tabLineHtml += ("<td><input type='text' value='" + items[2] + "' /></td></tr>");
         }
         $tab.append(tabLineHtml);
     });
 }
 
 
-$(document).ready(function (){
+$(document).ready(function () {
     loadTableList();
     onChangeData();
 });
 
 
-function loadTableList(){
+function loadTableList() {
 
-    var jqxhr = $.ajax( {
-        type: "POST", url: URL_BACKEND +  "/visier/tables",
-        dataType : 'json', // data type
+    var jqxhr = $.ajax({
+        type: "POST", url: URL_BACKEND + "/visier/tables",
+        dataType: 'json', // data type
         contentType: "application/json;charset=UTF-8",
-        data : null
+        data: null
     })
-        .done(function(resultObj) {
-            if (resultObj && resultObj.MappedTables){
-                let $ulTab = $("select#ulTables");
-                resultObj.MappedTables.forEach((tab)=> { $ulTab.append("<option value='"+tab.codigo+"' selected='selected'>"+ tab.codigo + "</option>")})
+        .done(function (resultObj) {
+            if (resultObj) {
+                let $ulTab = $("ul#ulTables");
+                resultObj.forEach((tab) => {
+                    $ulTab.append("<li value='" + tab.codigo + "' selected='selected'><dfn>" + tab.codigo + "</dfn> <span>" + tab.description + "</span> </li>")
+                })
             }
         })
-        .fail(function(err) {
-            alert( "error :" + err.toString() );
+        .fail(function (err) {
+            alert("error :" + err.toString());
         })
-        .always(function() {
+        .always(function () {
             // alert( "complete" );
         });
 
 }
 
-function showPlot(name){
-    let data = [];
-    console.log("data_returned.stars",data_returned.stars)
-    data_returned.stars.forEach((x)=>{
-        if(x.name == name){
-            x.data.forEach((item)=>{
-            data.push({x:eval(item[5]),y:item[1],error_x:0, error_y:item[2]});
+function showPlot(name) {
+    $("#div_" + name).show();
+    let data_ra = [];
+    let data_dec = [];
+    console.log("data_returned.stars", data_returned.stars)
+    data_returned.stars.forEach((x) => {
+        if (x.name == name) {
+            x.data.forEach((item) => {
+                data_ra.push({x: eval(item[5]), y: item[1], error_x: 0, error_y: item[2]});
+                data_dec.push({x: eval(item[5]), y: item[3], error_x: 0, error_y: item[4]});
             });
         }
     });
 
-    console.log(data);
+    console.log(data_ra);
 
-    var dataFormated = [
+    var dataFormated_ra = [
         {
             type: 'scatter',
-            x: data.reduce(function(prevVal, elem){
+            x: data_ra.reduce(function (prevVal, elem) {
                 prevVal.push(elem.x);
                 return prevVal;
-            },[]),
-            y: data.reduce(function(prevVal, elem){
+            }, []),
+            y: data_ra.reduce(function (prevVal, elem) {
                 prevVal.push(elem.y);
                 return prevVal;
-            },[]),
-            error_y:{
+            }, []),
+            error_y: {
                 type: 'data',
-                visible: true,
-                array: data.reduce(function(prevVal, elem){
-                prevVal.push(elem.error_y);
-                return prevVal;
-            },[])  }
+                visible: $("#showErrorMargin")[0].checked,
+                array: data_ra.reduce(function (prevVal, elem) {
+                    prevVal.push(elem.error_y);
+                    return prevVal;
+                }, [])
+            }
 
             ,
             /*error_x:data.reduce(function(prevVal, elem){
-                prevVal.push(elem.error_x);
-                return prevVal;
-            },[]) */
+             prevVal.push(elem.error_x);
+             return prevVal;
+             },[]) */
         }
     ];
 
-    console.log("data", dataFormated);
+    var dataFormated_dec = [
+        {
+            type: 'scatter',
+            x: data_dec.reduce(function (prevVal, elem) {
+                prevVal.push(elem.x);
+                return prevVal;
+            }, []),
+            y: data_dec.reduce(function (prevVal, elem) {
+                prevVal.push(elem.y);
+                return prevVal;
+            }, []),
+            error_y: {
+                type: 'data',
+                visible:$("#showErrorMargin")[0].checked,
+                array: data_dec.reduce(function (prevVal, elem) {
+                    prevVal.push(elem.error_y);
+                    return prevVal;
+                }, [])
+            }
+        }
+    ];
 
-    Plotly.newPlot("div_"+ name, dataFormated);
+
+    console.log("data", dataFormated_ra);
+
+    Plotly.newPlot("div_ra_" + name, dataFormated_ra);
+    Plotly.newPlot("div_dec_" + name, dataFormated_dec);
 
 }
 
 
-function showPlot_old(){
+function showPlot_old() {
 
-    Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/wind_speed_laurel_nebraska.csv', function(rows){
+    Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/wind_speed_laurel_nebraska.csv', function (rows) {
         var trace = {
             type: 'scatter',                    // set the chart type
             mode: 'lines',                      // connect points with lines
-            x: rows.map(function(row){          // set the x-data
+            x: rows.map(function (row) {          // set the x-data
                 return row['Time'];
             }),
-            y: rows.map(function(row){          // set the x-data
+            y: rows.map(function (row) {          // set the x-data
                 return row['10 Min Sampled Avg'];
             }),
             line: {                             // set the width of the line.
                 width: 1
             },
             error_y: {
-                array: rows.map(function(row){    // set the height of the error bars
+                array: rows.map(function (row) {    // set the height of the error bars
                     return row['10 Min Std Dev'];
                 }),
                 thickness: 0.5,                   // set the thickness of the error bars

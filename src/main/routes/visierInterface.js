@@ -2,7 +2,7 @@
  * Created by renato on 07/12/16.
  */
 
-import MappedTables from '../domains/MappedTables';
+import MappedTables from '../domains/MappedTables.json';
 import ADQLDAO from '../helpers/ADQLDAO'
 var express = require('express');
 var router = express.Router();
@@ -18,7 +18,8 @@ router.get('/', function (req, res) {
 
 
 router.post('/search', async function (req, res) {
-    const result = queryJsonObj;//await executeSearch(req);
+    const result = queryJsonObj;//
+    //const result =  await executeSearch(req);
     res.json(ADQLDAO.transformReturnedData(result));
 });
 
@@ -31,9 +32,9 @@ router.post('/tabColumns', async function (req, res) {
 
 
 router.post('/tables', async function (req, res) {
-    // const tables = await ADQLConnector.executeADQL("select table_name from tables");
+    //const tables = await ADQLConnector.executeADQL("select table_name from tables");
     // console.log(tables);
-    res.json(MappedTables );
+    res.json(MappedTables);
 });
 
 // define the about route
@@ -42,9 +43,9 @@ async function executeSearch(req) {
     const val = req.body.dados;
     console.log("val", val);
     for (let line in val) {
-        for (let tab in MappedTables.MappedTables) {
-            //console.log("tab",MappedTables.MappedTables[tab])
-            const requestReturnObject = await ADQLDAO.searchStars(val[line].ra, val[line].dec, val[line].name, MappedTables.MappedTables[tab]);
+        for (let tab in MappedTables) {
+            //console.log("tab",MappedTables[tab])
+            const requestReturnObject = await ADQLDAO.searchStars(val[line].ra, val[line].dec, val[line].name, MappedTables[tab]);
             console.log("statusCode", requestReturnObject.response.statusCode);
             if (requestReturnObject.response.statusCode && requestReturnObject.response.statusCode == 200) {
                 result.push(requestReturnObject.body);

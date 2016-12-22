@@ -18,7 +18,7 @@
         <form id="form" action="/VisierWebTool/StarSearchMainController" method="post">
             <fieldset>
                 <legend>
-                    Incusão de dados
+                    Data input
                 </legend>
 
                 <textarea id="dados" name="dados" cols="50" rows="6" onkeyup="onChangeData()" >TWA1	165.4659259731	-34.704789396
@@ -30,13 +30,22 @@ TWA19A	176.8520412459	-49.88421245</textarea>
                 <input type="button" value="Buscar" onclick="search()">
             </fieldset>
 
+			<fieldset>
+				<legend>Options</legend>
+				<div>
+					<label>Show Error Margin</label>
+					<input type="checkbox" id="showErrorMargin" />
+
+				</div>
+
+			</fieldset>
             <br>
 			<fieldset>
 				<div id="processedData">
 					<table id="processedDataTab">
 						<tr>
 							<th>
-								Nome
+								Name
 							</th>
 							<th>
 								RA
@@ -50,10 +59,10 @@ TWA19A	176.8520412459	-49.88421245</textarea>
 				</div>
 				<br>
 				<fieldset>
-					<legend >Tabelas</legend>
-					<select multiple id="ulTables">
+					<legend >Tables</legend>
+					<ul id="ulTables">
 
-					</select>
+					</ul>
 
 				</fieldset>
 
