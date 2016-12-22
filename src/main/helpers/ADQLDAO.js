@@ -1,6 +1,7 @@
 import fs from 'fs'
 import ADQLConnector from './ADQLConnector'
 import queryJson from '../mock/queryJson.json'
+import MathUtils from './MathUtils';
 
 const flag_mock = false;
 module.exports.readStarsADQL = async function () {
@@ -133,7 +134,18 @@ module.exports.transformReturnedData = function (queryJson) {
                 return eval(a[5]) - eval(b[5]);
             }
             return 0;
-        })
+        });
+
+        const adjustRA = new Array();
+        const adjustDEC= new Array();
+
+        s.data.forEach((b)=>{
+            adjustRA.push([eval(b[5]) , eval(b[1])]);
+            adjustDEC.push([eval(b[5]) , eval(b[3])]);
+        });
+        s.adjustRA = MathUtils.findAproximation(adjustRA, 2);
+        s.adjustDEC = MathUtils.findAproximation(adjustDEC, 2);
+
     })
 
     return obj;

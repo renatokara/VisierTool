@@ -11,7 +11,8 @@ function search_direct() {
 function search() {
 
     var url = "";
-
+    $("ul#estrelas").html("");
+    $.blockUI();
     var jqxhr = $.ajax({
         type: "POST", url: URL_BACKEND + "/visier/search",
         dataType: 'json', // data type
@@ -28,6 +29,7 @@ function search() {
                     "<a href='javascript:return false;' onclick=\"showPlot('" + star.name + "')\" >" + star.name + "</a>" +
                     "<div id='div_" + star.name + "' style='display:none;'> " +
                     getReturnedTableOfContents(star) +
+                        "<fieldset><legend>Adjust parameters</legend>"+star.adjustRA[0] + star.adjustRA[1]+" x </fieldset>"+
                     "   <div id='div_ra_" + star.name + "'></div>" +
                     "   <div id='div_dec_" + star.name + "'></div>" +
                     "</li>");
@@ -38,6 +40,7 @@ function search() {
         })
         .always(function () {
             // alert( "complete" );
+            $.unblockUI();
         });
 };
 
@@ -140,21 +143,39 @@ function showPlot(name) {
     $("#div_" + name).show();
     let data_ra = [];
     let data_dec = [];
+    let star = null;
+    const adjustRA_X = new Array();
+    const adjustRA_Y = new Array();
+    const adjustDEC_X = new Array();
+    const adjustDEC_Y = new Array();
+
     console.log("data_returned.stars", data_returned.stars)
     data_returned.stars.forEach((x) => {
         if (x.name == name) {
+            star = x;
             x.data.forEach((item) => {
                 data_ra.push({x: eval(item[5]), y: item[1], error_x: 0, error_y: item[2]});
                 data_dec.push({x: eval(item[5]), y: item[3], error_x: 0, error_y: item[4]});
+
+                if (x.adjustRA){
+                    adjustRA_X.push(eval(item[5]));
+                    adjustRA_Y.push(x.adjustRA[0] + x.adjustRA[1] * eval(item[5]));
+                }
+                if (x.adjustDEC){
+                    adjustDEC_X.push(eval(item[5]));
+                    adjustDEC_Y.push(x.adjustDEC[0] + x.adjustDEC[1] * eval(item[5]));
+                }
             });
         }
     });
 
     console.log(data_ra);
 
-    var dataFormated_ra = [
+    var dataFormated_ra = //[
         {
-            type: 'scatter',
+            name: 'RA',
+            //type: 'scatter',
+            mode: 'markers',
             x: data_ra.reduce(function (prevVal, elem) {
                 prevVal.push(elem.x);
                 return prevVal;
@@ -171,18 +192,14 @@ function showPlot(name) {
                     return prevVal;
                 }, [])
             }
+        };
+   // ];
 
-            ,
-            /*error_x:data.reduce(function(prevVal, elem){
-             prevVal.push(elem.error_x);
-             return prevVal;
-             },[]) */
-        }
-    ];
-
-    var dataFormated_dec = [
+    var dataFormated_dec =
         {
+            name: 'Declination',
             type: 'scatter',
+            mode: 'markers',
             x: data_dec.reduce(function (prevVal, elem) {
                 prevVal.push(elem.x);
                 return prevVal;
@@ -193,20 +210,56 @@ function showPlot(name) {
             }, []),
             error_y: {
                 type: 'data',
-                visible:$("#showErrorMargin")[0].checked,
+
+                visible: $("#showErrorMargin")[0].checked,
                 array: data_dec.reduce(function (prevVal, elem) {
                     prevVal.push(elem.error_y);
                     return prevVal;
                 }, [])
             }
-        }
-    ];
+        };
 
 
-    console.log("data", dataFormated_ra);
+    var dataFormated_adjustRa =
+        {
+            name: 'Adjust ',
+            type: 'scatter',
+            mode: 'lines+markers',
+            x: adjustRA_X,
+            y: adjustRA_Y
+        };
 
-    Plotly.newPlot("div_ra_" + name, dataFormated_ra);
-    Plotly.newPlot("div_dec_" + name, dataFormated_dec);
+
+
+    var dataFormated_adjustDec =
+        {
+            name: 'Adjust',
+            type: 'scatter',
+            mode: 'lines+markers',
+            x: adjustDEC_X,
+            y: adjustDEC_Y
+        };
+
+    console.log("adjustRA_X", adjustRA_X);
+    console.log("adjustRA_Y", adjustRA_Y);
+    var layout = {
+        title: "RA X Epoch " + name,
+        xaxis: {title: "Year"},       // set the y axis title
+        yaxis: {title: "RA"}       // set the y axis title
+    };
+    var layout2 = {
+        title: "Declination X Epoch " + name,
+        xaxis: {title: "Year"},       // set the y axis title
+        yaxis: {title: "Dec"}       // set the y axis title
+    };
+
+    console.log("dataFormated_adjustRa",dataFormated_adjustRa);
+    var data = [dataFormated_ra, dataFormated_adjustRa];
+    var dataDec = [dataFormated_dec, dataFormated_adjustDec];
+
+
+    Plotly.newPlot("div_ra_" + name, data , layout);
+    Plotly.newPlot("div_dec_" + name, dataDec, layout2);
 
 }
 
