@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--
+<canvas id="myCanvas" width="800" height="800" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+-->
+<div id='canv'></div>
+<script>
+
+
+    function createCanvas(idDiv){
+        let c = document.createElement('canvas');
+        c.setAttribute('width', 800);
+        c.setAttribute('height', 800);
+
+        document.getElementById(idDiv).appendChild(c);
+        //var c = document.getElementById("myCanvas");
+
+
+        var data = [{ra:170.5220324,dec: -24.7777056, epoch: 1991.08},
+            {ra:170.52226953,dec: -24.7776299, epoch:1991.25},
+            {ra:170.52226953,dec: -24.7776299, epoch:1991.25}];
+
+
+        var ctx = c.getContext("2d");
+
+        data.forEach((i)=>{
+            //360 = 800
+            //170
+            let pos_x = ((i.ra * 800)/360) + 180;
+            let pos_y = ((i.dec * 800)/360)  + 180;
+            ctx.moveTo(pos_x,pos_y);
+            let d_x = (i.ra / Math.sqrt(Math.pow(i.ra, 2)+ Math.pow(i.dec, 2)) * 100);
+            let d_y = (i.dec / Math.sqrt(Math.pow(i.ra, 2)+ Math.pow(i.dec, 2)) * 100);
+
+            console.log("d_x", d_x, "d_y", d_x);
+            ctx.lineTo(pos_x + d_x,pos_y +   d_y);
+            ctx.stroke();
+
+        });
+    }
+
+    createCanvas('canv');
+</script>
+
+</body>
+</html>

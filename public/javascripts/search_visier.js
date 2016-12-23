@@ -34,6 +34,11 @@ function search() {
                     "   <div id='div_dec_" + star.name + "'></div>" +
                     "</li>");
             });
+
+            $uls.append("<div id='canvasEstrelas'></div>");
+
+            createCanvas('canvasEstrelas');
+
         })
         .fail(function (err) {
             alert("error :" + err.toString());
@@ -302,4 +307,57 @@ function showPlot_old() {
         Plotly.plot(document.getElementById('out'), [trace], layout, {showLink: false});
     });
 
+}
+
+
+
+function createCanvas(idDiv){
+    let _width = 800, _height = 800;
+    let c = document.createElement('canvas');
+    c.setAttribute('width', _width);
+    c.setAttribute('height', _height);
+
+    document.getElementById(idDiv).appendChild(c);
+    //var c = document.getElementById("myCanvas");
+
+
+
+    var ctx = c.getContext("2d");
+
+
+    data_returned.stars.forEach((i)=>{
+
+        //360 = 800
+        //170
+        /*
+        let pos_x = ((i.ra * 800)/360) + 180;
+        let pos_y = ((i.dec * 800)/360)  + 180;
+        let d_x = (i.ra / Math.sqrt(Math.pow(i.ra, 2)+ Math.pow(i.dec, 2)) * 100);
+    let d_y = (i.dec / Math.sqrt(Math.pow(i.ra, 2)+ Math.pow(i.dec, 2)) * 100);
+        console.log("d_x", d_x, "d_y", d_x);
+    */
+        var arrEpochs = i.data.reduce(function (prevVal, elem) {
+            prevVal.push(eval(elem[5]));
+            return prevVal;
+        }, []);
+
+    console.log("arrEpochs", arrEpochs);
+
+    let pos_x = ((i.adjustDEC[0] * _width)/360) + 180;
+    let pos_y = ((i.adjustRA[0] * _height)/360) + 180;
+
+    ctx.moveTo(pos_x , pos_y );
+    ctx.beginPath();
+    ctx.fillStyle = "black";
+    ctx.strokeStyle = "black";
+    ctx.arc(pos_x,pos_y,1,0,2*Math.PI);
+    ctx.fill();
+    pos_x = pos_x + i.adjustDEC[1] * arrEpochs[0];
+    pos_y = pos_y + i.adjustRA[1] * arrEpochs[0];
+    ctx.moveTo(pos_x , pos_y );
+    ctx.strokeStyle = "red";
+    ctx.lineTo(pos_x + i.adjustDEC[1] * arrEpochs[arrEpochs.length - 1] * 1000,pos_y +   i.adjustRA[1] * arrEpochs[arrEpochs.length - 1]* 1000);
+    ctx.stroke();
+
+    });
 }
