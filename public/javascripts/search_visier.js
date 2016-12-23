@@ -2,7 +2,7 @@
  * Created by renato on 07/12/16.
  */
 
-const URL_BACKEND = "http://localhost:3000";
+const URL_BACKEND = "http://144.172.70.195:3000";
 let data_returned;
 function search_direct() {
     $("#retorno").show();
