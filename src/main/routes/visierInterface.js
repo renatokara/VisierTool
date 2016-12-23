@@ -18,8 +18,8 @@ router.get('/', function (req, res) {
 
 
 router.post('/search', async function (req, res) {
-    const result = queryJsonObj;//
-    //const result =  await executeSearch(req);
+    //const result = queryJsonObj;//
+    const result =  await executeSearch(req);
     res.json(ADQLDAO.transformReturnedData(result));
 });
 
