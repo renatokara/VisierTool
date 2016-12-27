@@ -7,7 +7,9 @@
     "start-dev": "babel-watch src/main/bin/www",
     "http-server-dev": "http-server public -p 8080",
     "test": "mocha --compilers js:babel-register src/test/",
-    "integration-test": "mocha --compilers js:babel-register src/it/"
+    "integration-test": "mocha --compilers js:babel-register src/it/",
+    "start-all": "npm run http-server-dev & npm run start-dev &"
+
   },
   "dependencies": {
     "body-parser": "^1.15.2",
