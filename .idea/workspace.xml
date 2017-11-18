@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2a27f2b-2aa1-4ae2-a827-2070eea6b3ff" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/domains/MappedTables_v2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/conversor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/search_visier.js" afterPath="$PROJECT_DIR$/public/javascripts/search_visier.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/search_visier.html" afterPath="$PROJECT_DIR$/public/search_visier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/domains/MappedTables.json" afterPath="$PROJECT_DIR$/src/main/domains/MappedTables.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/helpers/ADQLConnector.js" afterPath="$PROJECT_DIR$/src/main/helpers/ADQLConnector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/helpers/ADQLDAO.js" afterPath="$PROJECT_DIR$/src/main/helpers/ADQLDAO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/helpers/stars.sql" afterPath="$PROJECT_DIR$/src/main/helpers/stars.sql" />
     </list>
     <ignored path="VisierTool.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,6 +27,18 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="search_visier.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/javascripts/search_visier.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="52">
+                  <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+                  <folding>
+                    <marker date="1510964342434" expanded="true" signature="1009:1022" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="ADQLDAO.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/helpers/ADQLDAO.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -95,11 +99,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="search_visier.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="search_visier.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/public/search_visier.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="254">
-                  <caret line="24" column="137" lean-forward="true" selection-start-line="24" selection-start-column="137" selection-end-line="24" selection-end-column="137" />
+                <state relative-caret-position="98">
+                  <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -118,21 +122,9 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-91">
-                  <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+                <state relative-caret-position="91">
+                  <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="conversor.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/conversor.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="74">
-                  <caret line="27" column="69" lean-forward="true" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-                  <folding>
-                    <element signature="n#!!doc;n#convertoHourToDegree#0" expanded="false" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -222,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/main/routes/visierInterface.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/start.sh" />
-        <option value="$PROJECT_DIR$/public/javascripts/search_visier.js" />
         <option value="$PROJECT_DIR$/src/main/domains/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/test/conversor.js" />
         <option value="$PROJECT_DIR$/src/main/helpers/ADQLConnector.js" />
@@ -230,6 +221,7 @@
         <option value="$PROJECT_DIR$/src/main/domains/MappedTables.json" />
         <option value="$PROJECT_DIR$/src/main/helpers/stars.sql" />
         <option value="$PROJECT_DIR$/public/search_visier.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/search_visier.js" />
       </list>
     </option>
   </component>
@@ -781,7 +773,7 @@
       <workItem from="1483708335139" duration="60000" />
       <workItem from="1508352345744" duration="1253000" />
       <workItem from="1508355683826" duration="4271000" />
-      <workItem from="1510938071321" duration="13020000" />
+      <workItem from="1510938071321" duration="13643000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit from webstorm">
       <created>1481646282721</created>
@@ -882,7 +874,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205685000" />
+    <option name="totallyTimeSpent" value="206308000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1183,16 +1175,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/search_visier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding>
-            <marker date="1510938779440" expanded="true" signature="957:970" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/request/request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1221,14 +1203,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1301,9 +1275,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/search_visier.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="24" column="137" lean-forward="true" selection-start-line="24" selection-start-column="137" selection-end-line="24" selection-end-column="137" />
+        <state relative-caret-position="98">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/search_visier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <marker date="1510964342434" expanded="true" signature="1009:1022" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
