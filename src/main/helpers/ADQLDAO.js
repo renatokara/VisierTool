@@ -82,7 +82,9 @@ module.exports.parseColumnsStarsQuery =async function (ra, dec, name, tab){
     adql = parseNames(ra, dec, name, tab, adql);
     return adql;
 }
-
+function escapeRegExp(str) {
+    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
 function parseNames(ra, dec, name, tab, adql) {
     let colunas = "";
 

@@ -24,6 +24,7 @@ module.exports.executeADQL = async function executeADQL(adql) {
                     reject(err);
                     return;
                 }
+                console.log("adql", adql);
                 resolve({response: res, body: JSON.parse(body)});
             })
         }catch(ex){
